@@ -1,0 +1,218 @@
+import React from "react";
+import harshal from "../Pics/harshal.jpg";
+
+const About = () => {
+  return (
+    <div>
+      <div className="container emp-profile signup-content signup-form">
+        <form method="">
+          <div className="row">
+            <div className="col-md-4">
+              <div className="profile-img">
+                <img src={harshal} alt="Harshal" />
+              </div>
+            </div>
+            <div className="col-md-6">
+              <div className="profile-head">
+                <h4>Harshal Dubey</h4>
+                <h6>Web Developer</h6>
+                <p className="profile-rating mt-2 mb-5">
+                  Rankings: <span> 1/10</span>
+                </p>
+
+                <ul className="nav nav-tabs" role="tablist">
+                  <li className="nav-item">
+                    <a
+                      className="nav-link active"
+                      id="home-tab"
+                      data-toggle="tab"
+                      href="#home"
+                      role="tab"
+                    >
+                      About
+                    </a>
+                  </li>
+                  <li className="nav-item">
+                    <a
+                      className="nav-link active"
+                      id="profile-tab"
+                      data-toggle="tab"
+                      href="#profile"
+                      role="tab"
+                    >
+                      Timeline
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div className="col-md-2">
+              <input
+                type="submit"
+                className="profile-edit-button button"
+                name="btnAssMore"
+                value="Edit Profile"
+              />
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-md-4">
+              <div className="profile-work">
+                <h6>WORK LINK</h6>
+                <a
+                  href="https://www.youtube.com/watch?v=kHEhhV3EyPU&list=PLwGdqUZWnOp3t3qT7pvAznwUDzKbhEcCc&index=27"
+                  target="_thapa"
+                >
+                  Youtube
+                </a>
+                <br />
+                <a
+                  href="https://www.youtube.com/watch?v=kHEhhV3EyPU&list=PLwGdqUZWnOp3t3qT7pvAznwUDzKbhEcCc&index=27"
+                  target="_thapa"
+                >
+                  Instagram
+                </a>
+                <br />
+                <a
+                  href="https://www.youtube.com/watch?v=kHEhhV3EyPU&list=PLwGdqUZWnOp3t3qT7pvAznwUDzKbhEcCc&index=27"
+                  target="_thapa"
+                >
+                  Thapa Technical
+                </a>
+                <br />
+                <a
+                  href="https://www.youtube.com/watch?v=kHEhhV3EyPU&list=PLwGdqUZWnOp3t3qT7pvAznwUDzKbhEcCc&index=27"
+                  target="_thapa"
+                >
+                  WebsiteGitHubMERN Dev
+                </a>
+                <br />
+                <a
+                  href="https://www.youtube.com/watch?v=kHEhhV3EyPU&list=PLwGdqUZWnOp3t3qT7pvAznwUDzKbhEcCc&index=27"
+                  target="_thapa"
+                >
+                  Web Developer
+                </a>
+                <br />
+                <a
+                  href="https://www.youtube.com/watch?v=kHEhhV3EyPU&list=PLwGdqUZWnOp3t3qT7pvAznwUDzKbhEcCc&index=27"
+                  target="_thapa"
+                >
+                  Figma
+                </a>
+                <br />
+                <a
+                  href="https://www.youtube.com/watch?v=kHEhhV3EyPU&list=PLwGdqUZWnOp3t3qT7pvAznwUDzKbhEcCc&index=27"
+                  target="_thapa"
+                >
+                  Software Engineer
+                </a>
+                <br />
+              </div>
+            </div>
+            <div className="col-md-8 pl-5 about-info">
+              <div className="tab-content profile-tab" id="myTabContent">
+                <div
+                  className="tab-pane fade show active"
+                  id="home"
+                  role="tabpanel"
+                  aria-labelledby="home-tab"
+                >
+                  <div className="row">
+                    <div className="col-md-6">
+                      <label>User ID</label>
+                    </div>
+                    <div className="col-md-6">
+                      <p className="links_col">74564565465454</p>
+                    </div>
+                  </div>
+                  <div className="row mt-2">
+                    <div className="col-md-6">
+                      <label>Name</label>
+                    </div>
+                    <div className="col-md-6">
+                      <p className="links_col">Harshal Dubey</p>
+                    </div>
+                  </div>
+                  <div className="row mt-2">
+                    <div className="col-md-6">
+                      <label>Email</label>
+                    </div>
+                    <div className="col-md-6">
+                      <p className="links_col">harshaldubey11@gmail.com</p>
+                    </div>
+                  </div>
+                  <div className="row mt-2">
+                    <div className="col-md-6">
+                      <label>Phone</label>
+                    </div>
+                    <div className="col-md-6">
+                      <p className="links_col">9993879499</p>
+                    </div>
+                  </div>
+                  <div className="row mt-2 ">
+                    <div className="col-md-6">
+                      <label className=" profession">Profession</label>
+                    </div>
+                    <div className="col-md-6">
+                      <p className="links_col profession">Web Developer</p>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="tab-pane fade"
+                  id="profile"
+                  role="tabpanel"
+                  aria-labelledby="profile-tab"
+                >
+                  <div className="row">
+                    <div className="col-md-6">
+                      <label>Experience</label>
+                    </div>
+                    <div className="col-md-6">
+                      <p className="links_col">Expert</p>
+                    </div>
+                  </div>
+                  <div className="row mt-2">
+                    <div className="col-md-6">
+                      <label>Hourly Rate</label>
+                    </div>
+                    <div className="col-md-6">
+                      <p className="links_col">10$/hr</p>
+                    </div>
+                  </div>
+                  <div className="row mt-2">
+                    <div className="col-md-6">
+                      <label>Total Projects</label>
+                    </div>
+                    <div className="col-md-6">
+                      <p className="links_col">230</p>
+                    </div>
+                  </div>
+                  <div className="row mt-2">
+                    <div className="col-md-6">
+                      <label>English Level</label>
+                    </div>
+                    <div className="col-md-6">
+                      <p className="links_col">Expert</p>
+                    </div>
+                  </div>
+                  <div className="row mt-2">
+                    <div className="col-md-6">
+                      <label>Availibility</label>
+                    </div>
+                    <div className="col-md-6">
+                      <p className="links_col">6 months</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  );
+};
+
+export default About;
