@@ -30,7 +30,7 @@ const Contact = () => {
                 <img src={address03} alt="address" />
                 <div className="contact_info_content">
                   <div className="contact_info_title">Address</div>
-                  <div className="contact_info_text">Nagpur (MH) INDIA</div>
+                  <div className="contact_info_text">Nagpur (MH) , INDIA</div>
                 </div>
               </div>
             </div>

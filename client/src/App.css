@@ -577,6 +577,8 @@ textarea {
   width: 40rem;
   margin-top: 55px;
   height: 28rem;
+  padding-bottom: 6px;
+  /* background-color: rgba(226, 226, 226, 0.603); */
 }
 /* .col-md-4 {
   border: 2px solid blue;
@@ -664,3 +666,115 @@ textarea {
 
 /* .emp-profile {
 } */
+
+#not_found {
+  position: relative;
+  height: 90vh;
+}
+
+#not_found .not_found {
+  position: absolute;
+  left: 50%;
+  top: 26%;
+  transform: translate(-50%, -50%);
+}
+
+/* .not_found {
+  max-width: 920px;
+  width: 100%;
+  line-height: 1.4;
+  text-align: center;
+  padding-left: 15px;
+  padding-right: 15px;
+} */
+
+.not_found {
+  position: absolute;
+  height: 100px;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+.not_found h1 {
+  font-family: "Maven Pro", sans-serif;
+  color: #ececec;
+  font-weight: 900;
+  font-size: 276px;
+  margin: 0px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#not_found h2 {
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  position: absolute;
+  height: auto;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90vw;
+  /* border: 2px solid black; */
+
+  font-family: "Maven Pro", sans-serif;
+  font-size: 36px;
+  /* font-weight: 300; */
+  color: #000;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 0px;
+}
+
+#not_found p {
+  font-family: "Maven Pro", sans-serif;
+  font-size: 16px;
+  color: #000;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin: 15px;
+
+  position: absolute;
+  height: auto;
+  text-align: center;
+  top: 53%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90vw;
+}
+
+.error-button {
+  text-decoration: none;
+  /* padding: 20px; */
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 24px;
+  padding-right: 24px;
+  color: rgb(252, 248, 248);
+  background-color: rgb(6, 166, 240);
+  /* border: 1px solid black; */
+  border-radius: 50px;
+
+  position: absolute;
+  height: auto;
+  top: 65%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.error-button:hover {
+  color: rgb(90, 89, 89);
+}
+
+@media only screen and (max-width: 480px) {
+  #not_found h1 {
+    font-size: 162px;
+  }
+  #not_found h2 {
+    font-size: 26px;
+  }
+}

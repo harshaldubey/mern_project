@@ -1,12 +1,14 @@
 import React from "react";
 import "./App.css";
 import { Route } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
+import Errorpage from "./components/Errorpage";
 
 <script
   src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
@@ -32,6 +34,9 @@ const App = () => {
       </Route>
       <Route path="/signup">
         <Signup />
+      </Route>
+      <Route>
+        <Errorpage />
       </Route>
     </div>
   );
