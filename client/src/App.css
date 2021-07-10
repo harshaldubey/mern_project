@@ -35,8 +35,8 @@ body {
 
 .navbar img {
   max-width: 73px;
-  height: 73px;
-  margin-top: -15px;
+  height: 62px;
+  margin-top: -24px;
   margin-left: 1.2rem;
   margin-bottom: -12px;
 }
@@ -522,7 +522,7 @@ textarea {
 }
 
 .home-div {
-  border: 2px solid black;
+  margin-top: 3rem;
 }
 
 .pt-5 {
@@ -548,19 +548,22 @@ textarea {
   opacity: 0.9;
   overflow-x: hidden;
   padding-top: 20px;
-  margin-top: 70px;
+  margin-top: 55px;
 }
 
 .left {
   left: 0;
-  height: 34.1rem;
+  /* height: 34.6rem; */
+  height: 92.6vh;
   background-color: rgb(208, 241, 253);
+  /* margin-top: 55px; */
 }
 
 .right {
   right: 0;
-  height: 34.1rem;
-  background-color: rgb(255, 255, 255);
+  /* height: 34.6rem; */
+  height: 92.6vh;
+  background-color: white;
 }
 .emp-profile {
   display: flex;
