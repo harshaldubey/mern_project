@@ -1,8 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import registr09 from "../Pics/registr09.png";
 import { NavLink } from "react-router-dom";
 
 const Signup = () => {
+  const [user, setUser] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    work: "",
+    password: "",
+    cpassword: "",
+  });
+
+  let name, value;
+
+  const handleInputs = (e) => {
+    console.log(e);
+    name = e.target.name;
+    value = e.target.value;
+
+    setUser({ ...user, [name]: value });
+  };
+
   return (
     <div>
       <section className="signup">
@@ -21,7 +40,10 @@ const Signup = () => {
                       name="name"
                       id="name"
                       autoComplete="off"
+                      value={user.name}
+                      onChange={handleInputs}
                       placeholder="Your Name"
+                      required="true"
                     />
                   </div>
                   <div className="form-group">
@@ -33,7 +55,10 @@ const Signup = () => {
                       name="email"
                       id="email"
                       autoComplete="off"
+                      value={user.email}
+                      onChange={handleInputs}
                       placeholder="Your Email"
+                      required="true"
                     />
                   </div>
                   <div className="form-group">
@@ -45,7 +70,24 @@ const Signup = () => {
                       name="phone"
                       id="phone"
                       autoComplete="off"
+                      value={user.phone}
+                      onChange={handleInputs}
                       placeholder="Your Phone"
+                      required="true"
+                    />
+                  </div>
+                  <div className="form-group">
+                    <label htmlFor="work">
+                      <i class="zmdi zmdi-collection-case-play material-icons-name"></i>
+                    </label>
+                    <input
+                      type="text"
+                      name="work"
+                      id="work"
+                      autoComplete="off"
+                      value={user.work}
+                      onChange={handleInputs}
+                      placeholder="Your Profession"
                     />
                   </div>
                   <div className="form-group">
@@ -57,7 +99,10 @@ const Signup = () => {
                       name="password"
                       id="password"
                       autoComplete="off"
+                      value={user.password}
+                      onChange={handleInputs}
                       placeholder="Your Password"
+                      required="true"
                     />
                   </div>
                   <div className="form-group">
@@ -69,7 +114,10 @@ const Signup = () => {
                       name="cpassword"
                       id="cpassword"
                       autoComplete="off"
+                      value={user.cpassword}
+                      onChange={handleInputs}
                       placeholder="Confirm Your Password"
+                      required="true"
                     />
                   </div>
 

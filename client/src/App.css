@@ -332,21 +332,31 @@ h2::after {
   content: "\f207";
   margin: 4px;
   padding: 3px;
+  color: rgb(14, 1, 1);
 }
 .zmdi-email:before {
   content: "\f15a";
   margin: 4px;
   padding: 3px;
+  color: rgb(14, 1, 1);
 }
 .zmdi-phone-in-talk:before {
   content: "\f2b6";
   margin: 4px;
   padding: 3px;
+  color: rgb(14, 1, 1);
 }
 .zmdi-lock:before {
   content: "\f191";
   margin: 4px;
   padding: 3px;
+  color: rgb(14, 1, 1);
+}
+.zmdi-collection-case-play:before {
+  content: "\f13d";
+  margin: 3px;
+  padding: 3px;
+  color: rgb(14, 1, 1);
 }
 
 #register-form {
@@ -378,6 +388,10 @@ textarea {
   border-bottom: 1px solid rgb(37, 34, 34);
 }
 
+/* input#work {
+  margin-left: 22px;
+} */
+
 .signup-image {
   vertical-align: middle;
   max-width: 100%;
@@ -394,8 +408,8 @@ textarea {
 .signup-image figure img {
   margin: 40px 0px 2rem;
   width: 23vw;
-  height: 35vh;
-  margin: 115px 22px;
+  height: 36vh;
+  margin: 129px 22px;
   margin-bottom: 0px;
 }
 
