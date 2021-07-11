@@ -8,7 +8,7 @@ const Contact = () => {
     <div>
       <div className="contact_info">
         <div className="container-fluid">
-          <div className="row">
+          <div className="row contacts">
             <div className="col-lg-10 offset-lg-1 d-flex justify-content-between">
               <div className="contact_info_item d-flex justify-content-start align-items-center">
                 <img src={phone} alt="phone" />

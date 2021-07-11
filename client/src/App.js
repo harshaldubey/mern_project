@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
-import { Route } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.css";
+import { Route, Switch } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
@@ -20,24 +21,26 @@ const App = () => {
   return (
     <div>
       <Navbar />
-      <Route exact path="/">
-        <Home />
-      </Route>
-      <Route path="/about">
-        <About />
-      </Route>
-      <Route path="/contact">
-        <Contact />
-      </Route>
-      <Route path="/login">
-        <Login />
-      </Route>
-      <Route path="/signup">
-        <Signup />
-      </Route>
-      <Route>
-        <Errorpage />
-      </Route>
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/about">
+          <About />
+        </Route>
+        <Route path="/contact">
+          <Contact />
+        </Route>
+        <Route path="/login">
+          <Login />
+        </Route>
+        <Route path="/signup">
+          <Signup />
+        </Route>
+        <Route>
+          <Errorpage />
+        </Route>
+      </Switch>
     </div>
   );
 };
