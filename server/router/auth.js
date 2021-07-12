@@ -1,5 +1,5 @@
-const jwt = require("jsonwebtoken");
 const express = require("express");
+const jwt = require("jsonwebtoken");
 const router = express.Router();
 const bcrypt = require("bcryptjs");
 
@@ -39,6 +39,7 @@ router.get("/", (req, res) => {
 // });
 
 // Async-Await
+
 router.post("/register", async (req, res) => {
   const { name, email, phone, work, password, cpassword } = req.body;
 

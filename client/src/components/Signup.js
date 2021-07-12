@@ -1,8 +1,9 @@
 import React, { useState } from "react";
+import { NavLink, useHistory } from "react-router-dom";
 import registr09 from "../Pics/registr09.png";
-import { NavLink } from "react-router-dom";
 
 const Signup = () => {
+  const history = useHistory();
   const [user, setUser] = useState({
     name: "",
     email: "",
@@ -22,6 +23,40 @@ const Signup = () => {
     setUser({ ...user, [name]: value });
   };
 
+  const PostData = async (e) => {
+    e.preventDefault();
+
+    const { name, email, phone, work, password, cpassword } = user;
+
+    const res = await fetch("/register", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+
+      body: JSON.stringify({
+        name,
+        email,
+        phone,
+        work,
+        password,
+        cpassword,
+      }),
+    });
+
+    const data = await res.json();
+
+    if (data.status === 422 || !data) {
+      window.alert("Invalid Registration");
+      console.log("Invalid Registration");
+    } else {
+      window.alert("Registration Successfull");
+      console.log("Registration Successfull");
+
+      history.push("/login");
+    }
+  };
+
   return (
     <div>
       <section className="signup">
@@ -29,7 +64,7 @@ const Signup = () => {
           <div className="signup-content">
             <div className="signup-form">
               <div className="signup-inner " id="register-form">
-                <form className="register-form">
+                <form method="POST" className="register-form">
                   <h2 className="form-title">Signup</h2>
                   <div className="form-group">
                     <label htmlFor="name">
@@ -43,7 +78,7 @@ const Signup = () => {
                       value={user.name}
                       onChange={handleInputs}
                       placeholder="Your Name"
-                      required="true"
+                      // required="true"
                     />
                   </div>
                   <div className="form-group">
@@ -58,7 +93,7 @@ const Signup = () => {
                       value={user.email}
                       onChange={handleInputs}
                       placeholder="Your Email"
-                      required="true"
+                      // required="true"
                     />
                   </div>
                   <div className="form-group">
@@ -73,7 +108,7 @@ const Signup = () => {
                       value={user.phone}
                       onChange={handleInputs}
                       placeholder="Your Phone"
-                      required="true"
+                      // required="true"
                     />
                   </div>
                   <div className="form-group">
@@ -102,7 +137,7 @@ const Signup = () => {
                       value={user.password}
                       onChange={handleInputs}
                       placeholder="Your Password"
-                      required="true"
+                      // required="true"
                     />
                   </div>
                   <div className="form-group">
@@ -117,7 +152,7 @@ const Signup = () => {
                       value={user.cpassword}
                       onChange={handleInputs}
                       placeholder="Confirm Your Password"
-                      required="true"
+                      // required="true"
                     />
                   </div>
 
@@ -127,7 +162,8 @@ const Signup = () => {
                       name="signup"
                       id="signup"
                       className="form-submit"
-                      value="Register"
+                      value="register"
+                      onClick={PostData}
                     />
                   </div>
                 </form>
