@@ -39,7 +39,8 @@ router.get("/", (req, res) => {
 // });
 
 // Async-Await
-
+// app.use(express.static(path.join(__dirname, "pics")));
+// app.use(express.static(__dirname + "../client"));
 router.post("/register", async (req, res) => {
   const { name, email, phone, work, password, cpassword } = req.body;
 
