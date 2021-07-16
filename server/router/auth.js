@@ -2,6 +2,7 @@ const express = require("express");
 const jwt = require("jsonwebtoken");
 const router = express.Router();
 const bcrypt = require("bcryptjs");
+const authenticate = require("../middleware/authenticate");
 
 require("../db/conn");
 const User = require("../model/userSchema");
@@ -103,6 +104,11 @@ router.post("/signin", async (req, res) => {
   } catch (err) {
     console.log(err);
   }
+});
+
+// about us ka page
+router.get("/about", authenticate, (req, res) => {
+  res.send(`Hello About world from the server`);
 });
 
 module.exports = router;
