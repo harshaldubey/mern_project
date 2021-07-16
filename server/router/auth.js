@@ -74,7 +74,7 @@ router.post("/signin", async (req, res) => {
     const { email, password } = req.body;
 
     if (!email || !password) {
-      return res.status(400).json({ error: "Plz Filled the data " });
+      return res.status(400).json({ error: "Plz Filled the data" });
     }
 
     const userLogin = await User.findOne({ email: email });
@@ -93,12 +93,12 @@ router.post("/signin", async (req, res) => {
       });
 
       if (!isMatch) {
-        res.status(400).json({ error: "Invalid Cradentials Pass" });
+        res.status(400).json({ error: "Invalid Credentials Pass" });
       } else {
         res.json({ message: "user Signin successfully" });
       }
     } else {
-      res.status(400).json({ error: "Inavlid Cradentials" });
+      res.status(400).json({ error: "Inavlid Credentials" });
     }
   } catch (err) {
     console.log(err);
