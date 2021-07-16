@@ -21,6 +21,9 @@ const PORT = process.env.PORT;
 //   next();
 // };
 
+// app.get("/about", Middelware, (req, res) => {
+//   res.send(`Hello About world from the server`);
+// });
 app.get("/signin", (req, res) => {
   res.send(`Hello Login world from the server`);
 });
