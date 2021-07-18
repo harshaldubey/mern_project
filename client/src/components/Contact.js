@@ -1,9 +1,37 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import phone from "../Pics/phone.png";
 import mail from "../Pics/mail.png";
 import address03 from "../Pics/address03.png";
 
 const Contact = () => {
+  const [userData, setUserData] = useState({});
+
+  const userContact = async () => {
+    try {
+      const res = await fetch("/getdata", {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      const data = await res.json();
+      console.log(data);
+      setUserData(data);
+
+      if (!res.status === 200) {
+        const error = new Error(res.error);
+        throw error;
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  useEffect(() => {
+    userContact();
+  }, []);
+
   return (
     <div>
       <div className="contact_info">
@@ -51,6 +79,7 @@ const Contact = () => {
                       id="contact_form_name"
                       className="contact_form_name input_field"
                       placeholder="Your Name"
+                      value={userData.name}
                       required="true"
                     />
                     <input
@@ -58,6 +87,7 @@ const Contact = () => {
                       id="contact_form_email"
                       className="contact_form_email input_field"
                       placeholder="Your Email"
+                      value={userData.email}
                       required="true"
                     />
                     <input
@@ -65,6 +95,7 @@ const Contact = () => {
                       id="contact_form_phone"
                       className="contact_form_phone input_field"
                       placeholder="Your Phone Number"
+                      value={userData.phone}
                       required="true"
                     />
                   </div>

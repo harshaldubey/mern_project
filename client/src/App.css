@@ -509,9 +509,16 @@ textarea {
 .contact_form .input_field {
   border: 1px solid black;
   border-radius: 7px;
+  font-size: 18px;
+  padding-left: 10px;
+  padding-right: 12px;
   margin: 47px;
   margin-top: 20px;
   margin-bottom: 0px;
+}
+
+#contact_form_email {
+  width: 112%;
 }
 
 .contact_form_message {
