@@ -4,7 +4,12 @@ import mail from "../Pics/mail.png";
 import address03 from "../Pics/address03.png";
 
 const Contact = () => {
-  const [userData, setUserData] = useState({});
+  const [userData, setUserData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
 
   const userContact = async () => {
     try {
@@ -17,7 +22,12 @@ const Contact = () => {
 
       const data = await res.json();
       console.log(data);
-      setUserData(data);
+      setUserData({
+        ...userData,
+        name: data.name,
+        email: data.email,
+        phone: data.phone,
+      });
 
       if (!res.status === 200) {
         const error = new Error(res.error);
@@ -31,6 +41,18 @@ const Contact = () => {
   useEffect(() => {
     userContact();
   }, []);
+
+  // We are storing data in states
+
+  const handleInputs = (e) => {
+    const name = e.target.name;
+    const value = e.target.value;
+
+    setUserData({
+      ...userData,
+      [name]: value,
+    });
+  };
 
   return (
     <div>
@@ -80,6 +102,8 @@ const Contact = () => {
                       className="contact_form_name input_field"
                       placeholder="Your Name"
                       value={userData.name}
+                      name="name"
+                      onChange={handleInputs}
                       required="true"
                     />
                     <input
@@ -88,6 +112,8 @@ const Contact = () => {
                       className="contact_form_email input_field"
                       placeholder="Your Email"
                       value={userData.email}
+                      name="email"
+                      onChange={handleInputs}
                       required="true"
                     />
                     <input
@@ -96,6 +122,8 @@ const Contact = () => {
                       className="contact_form_phone input_field"
                       placeholder="Your Phone Number"
                       value={userData.phone}
+                      name="phone"
+                      onChange={handleInputs}
                       required="true"
                     />
                   </div>
@@ -103,6 +131,9 @@ const Contact = () => {
                   <div className="contact_form_text mt-5 ">
                     <textarea
                       className="text_field contact_form_message"
+                      value={userData.message}
+                      name="message"
+                      onChange={handleInputs}
                       placeholder="Message"
                       cols="30"
                       rows="10"
