@@ -128,8 +128,8 @@ router.post("/contact", authenticate, async (req, res) => {
       return res.json({ error: "Please filled the contact form properly" });
     }
 
-    const userContact = await user.findOne({ _id: req.userID });
-    if (userData) {
+    const userContact = await User.findOne({ _id: req.userID });
+    if (userContact) {
       const userMessage = await userContact.addMessage(
         name,
         email,
