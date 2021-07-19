@@ -54,6 +54,35 @@ const Contact = () => {
     });
   };
 
+  // send the data to the Backend
+  const contactForm = async (e) => {
+    e.preventDefault();
+
+    const { name, email, phone, message } = userData;
+
+    const res = await fetch("/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name,
+        email,
+        phone,
+        message,
+      }),
+    });
+
+    const data = await res.json();
+
+    if (!data) {
+      console.log("message not send");
+    } else {
+      alert("Message Send");
+      setUserData({ ...userData, message: "" });
+    }
+  };
+
   return (
     <div>
       <div className="contact_info">
@@ -94,7 +123,7 @@ const Contact = () => {
               <div className="contact_form_container py-5">
                 <div className="contact_form_title">Get in Touch</div>
 
-                <form id="contact_form">
+                <form method="POST" id="contact_form">
                   <div className="contact_form_name d-flex justify-content-between align-items-between">
                     <input
                       type="text"
@@ -147,6 +176,7 @@ const Contact = () => {
                       id="contact_button"
                       className="form-submit"
                       // value="Register"
+                      onClick={contactForm}
                     >
                       Send Message
                     </button>

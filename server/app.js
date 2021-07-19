@@ -26,16 +26,15 @@ const PORT = process.env.PORT;
 // app.get("/about", Middelware, (req, res) => {
 //   res.send(`Hello About world from the server`);
 // });
+// app.get("/contact", (req, res) => {
+//   res.send(`Hello Contact world from the server`);
+// });
 app.get("/signin", (req, res) => {
   res.send(`Hello Login world from the server`);
 });
 app.get("/signup", (req, res) => {
   res.send(`Hello Registration world from the server`);
 });
-app.get("/contact", (req, res) => {
-  res.send(`Hello Contact world from the server`);
-});
-
 app.listen(PORT, () => {
   console.log(`server is running at port ${PORT}`);
 });
