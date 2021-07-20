@@ -106,7 +106,7 @@ router.post("/signin", async (req, res) => {
   }
 });
 
-// about us ka page
+// about us page
 router.get("/about", authenticate, (req, res) => {
   console.log(`Hello my About`);
   res.send(req.rootUser);
