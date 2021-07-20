@@ -414,7 +414,8 @@ textarea {
 }
 
 .signup-image a {
-  margin: 120px;
+  display: block;
+  text-align: center;
 }
 
 .signin-image figure img {
@@ -426,7 +427,8 @@ textarea {
 }
 
 .signin-image a {
-  margin: 100px;
+  display: block;
+  text-align: center;
 }
 
 .row.contacts {

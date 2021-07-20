@@ -10,6 +10,7 @@ import Contact from "./components/Contact";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
 import Errorpage from "./components/Errorpage";
+import Logout from "./components/Logout";
 
 const App = () => {
   return (
@@ -30,6 +31,9 @@ const App = () => {
         </Route>
         <Route path="/signup">
           <Signup />
+        </Route>
+        <Route path="/logout">
+          <Logout />
         </Route>
         <Route>
           <Errorpage />
