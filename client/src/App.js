@@ -13,7 +13,7 @@ import Logout from "./components/Logout";
 import { initialState, reducer } from "../src/reducer/UseReducer";
 
 // context API
-export const UserContext = createContext();
+export const userContext = createContext();
 
 const Routing = () => {
   return (
@@ -47,10 +47,10 @@ const App = () => {
 
   return (
     <div>
-      <UserContext.provider value={{ state, dispatch }}>
+      <userContext.provider value={{ state, dispatch }}>
         <Navbar />
         <Routing />
-      </UserContext.provider>
+      </userContext.provider>
     </div>
   );
 };
