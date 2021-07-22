@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 import logo03 from "../Pics/logo03.jpg";
 
 import { userContext } from "../App";
+// import { userContext } from "../index";
 
 const Navbar = () => {
   const { state, dispatch } = useContext(userContext);
