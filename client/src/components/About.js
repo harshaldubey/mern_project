@@ -96,36 +96,34 @@ const About = () => {
             <div className="col-md-4">
               <div className="profile-work">
                 <h6>WORK LINK</h6>
-                <a
-                  href="https://www.youtube.com/watch?v=kHEhhV3EyPU&list=PLwGdqUZWnOp3t3qT7pvAznwUDzKbhEcCc&index=27"
-                  target="_thapa"
-                >
-                  Youtube
+                <a href="https://www.github.com/harshaldubey" target="_thapa">
+                  Github-Harshal
                 </a>
                 <br />
                 <a
-                  href="https://www.youtube.com/watch?v=kHEhhV3EyPU&list=PLwGdqUZWnOp3t3qT7pvAznwUDzKbhEcCc&index=27"
+                  href="https://www.github.com/harshaldubey/mern_project.git"
                   target="_thapa"
                 >
+                  WebsiteGitHubMERN
+                </a>
+                <br />
+                <a
+                  href="https://www.linkedin.com/in/harshal-dubey-66218319a/"
+                  target="_thapa"
+                >
+                  LinkedIn-HD
+                </a>
+                <br />
+                <a href="https://www.youtube.com" target="_thapa">
+                  Youtube
+                </a>
+                <br />
+                <a href="https://www.instagram.com/" target="_thapa">
                   Instagram
                 </a>
                 <br />
                 <a
-                  href="https://www.youtube.com/watch?v=kHEhhV3EyPU&list=PLwGdqUZWnOp3t3qT7pvAznwUDzKbhEcCc&index=27"
-                  target="_thapa"
-                >
-                  Thapa Technical
-                </a>
-                <br />
-                <a
-                  href="https://www.youtube.com/watch?v=kHEhhV3EyPU&list=PLwGdqUZWnOp3t3qT7pvAznwUDzKbhEcCc&index=27"
-                  target="_thapa"
-                >
-                  WebsiteGitHubMERN Dev
-                </a>
-                <br />
-                <a
-                  href="https://www.youtube.com/watch?v=kHEhhV3EyPU&list=PLwGdqUZWnOp3t3qT7pvAznwUDzKbhEcCc&index=27"
+                  href="https://github.com/harshaldubey/expenseTracker.git"
                   target="_thapa"
                 >
                   Web Developer

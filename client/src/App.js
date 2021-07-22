@@ -15,7 +15,7 @@ import { initialState, reducer } from "../src/reducer/UseReducer";
 // context API
 export const userContext = createContext();
 
-export const Routing = () => {
+const Routing = () => {
   return (
     <Switch>
       <Route exact path="/">
