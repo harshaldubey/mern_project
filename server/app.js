@@ -16,7 +16,8 @@ app.use(express.json());
 app.use(require("./router/auth"));
 
 //2:step heroku
-const PORT = process.env.PORT || 5000;
+// const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT;
 
 // Middelware
 // const Middelware = (req, res, next) => {
@@ -38,9 +39,9 @@ app.get("/signup", (req, res) => {
 });
 
 // 3:step heroku
-if (process.env.NODE_ENV == "production") {
-  app.use(express.static("client/build"));
-}
+// if (process.env.NODE_ENV == "production") {
+//   app.use(express.static("client/build"));
+// }
 
 app.listen(PORT, () => {
   console.log(`server is running at port ${PORT}`);
